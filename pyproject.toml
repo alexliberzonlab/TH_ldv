@@ -1,0 +1,27 @@
+[project]
+name = "th-ldv"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "liorshig", email = "44317426+liorshig@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.0",
+    "numpy>=2.4.6",
+    "pandas>=3.0.3",
+    "xarray>=2026.4.0",
+    "xrturb",
+]
+
+[project.scripts]
+th-ldv = "th_ldv:main"
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+xrturb = { git = "https://github.com/liorshig/xrturb" }
